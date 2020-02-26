@@ -47,6 +47,9 @@ endif
 "
 " Work out which versions of tf.exe and tfpt.exe are available
 "
+if (filereadable(s:pfiles.'\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer'))
+    let s:tfs_tf='"'.s:pfiles.'\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer"'
+    let s:tfs_recurse_command='/recursive'
 if (filereadable(s:pfiles.'\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe'))
     let s:tfs_tf='"'.s:pfiles.'\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe"'
     let s:tfs_recurse_command='/recursive'

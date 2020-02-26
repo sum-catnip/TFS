@@ -50,7 +50,7 @@ endif
 if (filereadable(s:pfiles.'\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer'))
     let s:tfs_tf='"'.s:pfiles.'\Microsoft Visual Studio\2017\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer"'
     let s:tfs_recurse_command='/recursive'
-if (filereadable(s:pfiles.'\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe'))
+elseif (filereadable(s:pfiles.'\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe'))
     let s:tfs_tf='"'.s:pfiles.'\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe"'
     let s:tfs_recurse_command='/recursive'
 elseif (filereadable(s:pfiles.'\Microsoft Visual Studio 10.0\Common7\IDE\TF.exe'))
